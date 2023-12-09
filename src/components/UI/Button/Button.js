@@ -4,7 +4,7 @@ import './Button.css';
 
 const Button = props => {
   return (
-    <button type={props.type} className="button" onClick={props.onClick} style={{ background: !props.isValid ? 'rgb(173, 17, 17)' : 'black' }}>
+    <button type={props.type} className={`button ${!props.isValid ?'invalid' : ''}`} onClick={props.onClick}>
       {props.children}
     </button>
   );
